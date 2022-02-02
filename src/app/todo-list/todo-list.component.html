@@ -1,0 +1,24 @@
+<h2>Todo List</h2>
+
+<!-- without ngFor: -->
+<!--
+<app-todo-item [checked]="todos[0].checked" [text]="todos[0].text"></app-todo-item>
+<br>
+<app-todo-item [checked]="todos[1].checked" [text]="todos[1].text"></app-todo-item>
+<br>
+<app-todo-item [checked]="todos[2].checked" [text]="todos[2].text"></app-todo-item>
+<br>
+<app-todo-item [checked]="todos[3].checked" [text]="todos[3].text"></app-todo-item>
+-->
+
+<div *ngFor="let todo of todos">
+    <app-todo-item [checked]="todo.checked" [text]="todo.text" [class]="todo.class"></app-todo-item>
+    <br>
+</div>
+
+<br>
+<br>
+<!-- this is a custom directive -->
+<div comicSans>
+    This is just a showcase that we can use custom directives. By adding this directive to an html tag the font-family is changed to comic sans.
+</div>

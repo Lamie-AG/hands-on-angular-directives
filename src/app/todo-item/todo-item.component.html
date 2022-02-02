@@ -1,0 +1,6 @@
+<div>
+    <input type="checkbox" id="checkbox" [(ngModel)]="checked">
+    <input type="text" [(ngModel)]="text" [ngClass]="class" id="text">
+    
+    <span *ngIf="checked"> Congrats, you have finished "{{text}}"</span>
+</div>
